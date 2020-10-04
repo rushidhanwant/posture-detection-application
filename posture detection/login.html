@@ -1,0 +1,114 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Posture</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="stylecss.css">
+<body>
+<!--header menu started--->
+<div class="container-fluid header py-3 menuholder">
+	<div class="">
+		<div class="float-right py-2">
+			<a class="headicon fa fa-facebook-square  fa-2x px-3" href="" aria-hidden="true"></a>
+			
+			<a class="headicon fa fa-instagram  fa-2x px-3" aria-hidden="true" href=""></a>
+		</div>
+		<img src="logo.png" width="15%">
+		
+		
+	</div>
+</div>
+<!--header menu ended--->
+
+<div class="container" style="margin-top:150px; background:#d2d2d2; box-shadow:2px 2px 10px 0 #000; border-radius:10px;">
+	<div class="container buttonscontainer ">
+		<div class="row m-0">
+			<div class="col-4 col-md-4 col-lg-4 ">
+				<div class="formcontainer py-3 px-3 my-auto bg-danger d-flex align-items-center justify-content-center">
+				<!--Login form-->
+					<form action="login.php" method="POST" id="loginform" class="animated fadeInDown">
+						<center>
+							<h4 class="text-light">Login here</h4>
+							<div class="form-group ">
+								<input type="text" class="form-control "  placeholder="User Name" name="name" required>
+							 </div>
+							
+							<div class="form-group">
+								<input type="password" class="form-control"  placeholder="Password" name="pass" required>
+							</div>
+							  
+							  <button type="submit" class="btn btn-success"  name="clicklogin">Login</button>
+						</center>
+						
+					</form>
+					
+					<!--registration Form-->
+					<form action="register.php" method="post" id="registrationform" class="animated fadeInUp"> 
+						<center>
+							<h4 class="text-light">Register here</h4>
+							<div class="form-group ">
+								<input type="text" class="form-control " placeholder="User Name" name="name" required>
+							 </div>
+							<div class="form-group">
+								<input type="email" class="form-control " placeholder="User Email" name="email" required>
+							 </div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Password" name="pass" required>
+							</div>
+							  
+							  <button type="submit" class="btn btn-success" name="clickregistration">Register</button>
+						</center>
+					</form>
+				</div>
+			</div>
+			<div class="col-4 col-md-4 col-lg-4 ">
+				<div class="py-5">
+					<h4>Guidlines As Follows</h4>
+					<p class="guidlinesitem animated fadeInLeft delay-1s">Make A Account</p>
+					<p class="guidlinesitem animated fadeInLeft delay-2s">Login into your account</p>
+					<p class="guidlinesitem animated fadeInLeft delay-1s">Explore Our MyPosture Website</p>
+					<p class="guidlinesitem animated fadeInLeft delay-2s" >Correct Your Posture</p>
+					<p class="guidlinesitem animated fadeInLeft delay-1s">Get Results Quickly</p>
+				</div>
+			</div>
+			<div class="col-4 col-md-4 col-lg-4 ">
+				<div class="py-5">
+					<div id="loginsection" class="animated fadeIn">
+						<h4>Have a account? Login Here</h4>
+						<button class="btn btn-success " onclick="loginclick()" id="btnlogin">Login</button>
+					</div>
+					<div id="registersection" class="animated fadeIn">
+						<h4>Don't have a account?</h4>
+						<button class="btn btn-success "  onclick="registrationclick()" id="btnregistration">Register</button>
+					</div>
+			
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+
+
+
+<script>
+
+function registrationclick(){
+	document.getElementById("loginsection").style.display="block";
+	document.getElementById("registersection").style.display="none";
+	document.getElementById("registrationform").style.display="block";
+	document.getElementById("loginform").style.display="none";
+}
+function loginclick(){
+	document.getElementById("loginsection").style.display="none";
+	document.getElementById("registersection").style.display="block";
+	document.getElementById("registrationform").style.display="none";
+	document.getElementById("loginform").style.display="block";
+}
+</script>
+</body>
+</html>
